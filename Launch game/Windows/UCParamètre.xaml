@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Launch_game.Windows.UCParametre"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Launch_game.Windows"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Text="Chemin" x:Name="CheminSource_Textbox"></TextBox>
+            <TextBox Grid.Row="1" Text="Nom Source" x:Name="NomSource_Textbox" ></TextBox>
+            <Button Content="Ajouter" Grid.Row="2" Click="AjouterSource_Click"></Button>
+        </Grid>
+        <Button Content="Mettre à jour" Grid.Column="1" Grid.Row="1" VerticalAlignment="Top" Click="Update_Click"></Button>
+        <Button Content="Chercher Dossier" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Click="ChercherJeux_Click"></Button>
+        <Button Content="Supprimer" Grid.Column="1" Grid.Row="1"  Click="SupprimerSource_Click" VerticalAlignment="Bottom" />
+
+        <ListBox Grid.Column="0" x:Name="ListeSourceVue" SelectionChanged="ListeSource_SelectionChanged" Grid.RowSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
+                        <TextBlock FontStretch="Condensed" Text="{Binding NomSource}" />
+                        <TextBlock Text="{Binding CheminDossier}" Margin="5,0,0,0"/>
+                    </StackPanel>                    
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Content="Chercher Dossier" Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom" Click="ChercherSource_Click"></Button>
+        
+
+    </Grid>
+    
+</UserControl>
