@@ -76,7 +76,10 @@ namespace Classe
 
         public void AjouterCategory(Category category)
         {
-            this.ListCategory.Add(category);
+            if (!this.ListCategory.Contains(category))
+            {
+                this.ListCategory.Add(category);
+            }
         }
 
         public string EcrireCategory()
@@ -88,7 +91,7 @@ namespace Classe
             }
             for (int i = 0; i < ListCategory.Count(); i++)
             {
-                text = text + ListCategory[i];
+                text = text +" & "+ ListCategory[i];
             }
             return text;
         }

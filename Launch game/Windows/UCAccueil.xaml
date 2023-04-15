@@ -32,15 +32,15 @@
         <TextBox                                        Grid.Column="1" Grid.Row="0"                                                                                    x:Name="TextboxRename" BorderBrush="Black"/>
         <Button Content="Delete" Click="Delete_Click"   Grid.Column="1" Grid.Row="1"                        VerticalAlignment="Top"     HorizontalAlignment="Left"/>
         <Button Content="Rename" Click="Rename_Click"   Grid.Column="1" Grid.Row="1"                        VerticalAlignment="Top"     HorizontalAlignment="Center"/>
-        
+
         <Button Content="Launch" Click="Launch_Click"   Grid.Column="2" Grid.Row="0"                        VerticalAlignment="Top"     HorizontalAlignment="Left"/>
-        
+
         <Button Content="Save"   Click="Save_Click"     Grid.Column="3" Grid.Row="2"                        VerticalAlignment="Top"     HorizontalAlignment="Left"/>
 
         <TextBlock                                      Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"    VerticalAlignment="Bottom"  HorizontalAlignment="Left"      x:Name="BoutonLol"/>
 
         <TextBlock Text="{Binding NombreJeux}"          Grid.Column="1" Grid.Row="1"                        VerticalAlignment="Top"  HorizontalAlignment="Right"      x:Name="CompteurJeux"></TextBlock>
-               
+
         <Button Content="Clear" Grid.Column="3" Grid.Row="2" Click="Clear_Click" VerticalAlignment="Center" HorizontalAlignment="Center"></Button>
 
         <TextBlock Grid.Row="1" Grid.Column="2" Text="Coucou" Background="ForestGreen" x:Name="TextBlock_category"></TextBlock>
@@ -62,10 +62,10 @@
             <Button Content="Filtre Conduite" Click="Filtre_conduite_Click" Width="100"></Button>
             <Button Content="Filtre Survival" Click="Filtre_survival_Click" Width="100"></Button>
         </WrapPanel>
-        
+
         <Button Content="Filtrer All" Grid.Column="2" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="Filtre_all_Click"></Button>
         <TextBox Grid.Row="0" Grid.Column="3" x:Name="TextBoxRecherche" Text="Recherche" TextChanged="TextBoxRecherche_TextChanged"></TextBox>
         <!--<Button Content="Lol" Grid.Column="2" Grid.Row="2" Click="Lol_Click"></Button>-->
-        
+        <Button Content="Modifier" Click="Modifier_Click" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
     </Grid>
 </UserControl>

@@ -17,7 +17,8 @@ namespace Launch_game
         public enum Etat
         {
             ACCUEIL,
-            PARAMETRE
+            PARAMETRE,
+            MODIFICATIONJEUX
         }
 
         /// <summary>

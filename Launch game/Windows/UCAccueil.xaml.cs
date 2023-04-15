@@ -205,6 +205,11 @@ namespace Launch_game.Windows
             ListeJeuxVue.ItemsSource = (App.Current as App).LeManager.ListeJeux.FiltreCategory(Category.Survival);
         }
 
-        # endregion
+        #endregion
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
+        {
+            (App.Current as App).LeNavigateur.Etatactuel = Navigator.Etat.MODIFICATIONJEUX;
+        }
     }
 }
