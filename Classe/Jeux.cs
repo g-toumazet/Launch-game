@@ -40,13 +40,14 @@ namespace Classe
 
         public bool JeuxValide()
         {
-            if (!Nom.Contains("Crash")
+            if (
+                !Nom.Contains("Crash")
                 && !Nom.Contains("crash")
                 && !Nom.Contains("error")
                 && !Nom.Contains("Error")
                 && !Nom.Contains("tools")
                 && !Nom.Contains("Win64")
-                && !Nom.Contains("x86")
+                && !Nom.Contains(" x86")
                 && !Nom.Contains("setup")
                 && !Nom.Contains("Helper")
                 && !Nom.Contains("Ux")
@@ -62,6 +63,10 @@ namespace Classe
                 && !Nom.Contains("script")
                 && !Nom.Contains("Script")
                 && !Nom.Contains("encode")
+                && !Nom.Contains("diagnostics")
+                && !Nom.Contains("wallpaper_engine")
+                && !Nom.Contains("Steamworks Shared")
+
                 )
             {
                 return true;

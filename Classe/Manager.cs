@@ -20,7 +20,6 @@ namespace Classe
         {            
             var donnees = Persistance.ChargerDonnees();
             ListeJeux = donnees.Jeux;
-            //ListeJeux = new ListJeux();
             ListeSource = donnees.Source;
         }
 

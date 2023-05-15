@@ -10,14 +10,31 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Sauvegarder" Click="Sauvegarder_Click" Grid.Column="0" Grid.Row="0"/>
-        <Button Content="Annuler" Click="Annuler_Click" Grid.Column="0" Grid.Row="1"/>
+        <Button Content="Sauvegarder" Click="Sauvegarder_Click" Grid.Column="2" Grid.Row="3"/>
+        <Button Content="Annuler" Click="Annuler_Click" Grid.Column="3" Grid.Row="3"/>
         <TextBlock Text="{Binding Nom}" Grid.Column="1" Grid.Row="0" VerticalAlignment="Top" x:Name="NomJeux"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Coucou" Background="ForestGreen" x:Name="TextBlock_category"></TextBlock>
+
+        <WrapPanel Grid.Column="1" Grid.Row="2">
+            <Button Content="Ajouter Multi" Click="Ajouter_multi_Click" Width="100" x:Name="Button_Multi"></Button>
+            <Button Content="Ajouter Solo" Click="Ajouter_solo_Click" Width="100" x:Name="Button_Solo"></Button>
+            <Button Content="Ajouter Fun" Click="Ajouter_fun_Click" Width="100" x:Name="Button_Fun"></Button>
+            <Button Content="Ajouter Histoire" Click="Ajouter_histoire_Click" Width="100" x:Name="Button_Histoire"></Button>
+            <Button Content="Ajouter FPS" Click="Ajouter_fps_Click" Width="100" x:Name="Button_FPS"></Button>
+            <Button Content="Ajouter Conduite" Click="Ajouter_conduite_Click" Width="100" x:Name="Button_Conduite"></Button>
+            <Button Content="Ajouter Survival" Click="Ajouter_survival_Click" Width="100" x:Name="Button_Survival"></Button>
+        </WrapPanel>
+        
     </Grid>
     
 </UserControl>
