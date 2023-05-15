@@ -27,6 +27,8 @@ namespace Launch_game
                     return new UCAccueil();
                 case Navigator.Etat.PARAMETRE:
                     return new UCParametre();
+                case Navigator.Etat.MODIFICATIONJEUX:
+                    return new UCModificationJeux();
                 default:
                     break;
             }

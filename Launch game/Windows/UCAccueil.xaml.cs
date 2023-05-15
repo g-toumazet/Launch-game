@@ -60,7 +60,7 @@ namespace Launch_game.Windows
                     (App.Current as App).LeManager.IndexJeuxChoisi = d;
                     BoutonLol.Text = ListeJeux[d].Chemin;
                     TextboxRename.Text = ListeJeux[d].Nom;
-                    TextBlock_category.Text = ListeJeux[d].EcrireCategory();
+
                 }               
             }
         }
@@ -114,56 +114,6 @@ namespace Launch_game.Windows
             ListeJeuxVue.ItemsSource = (App.Current as App).LeManager.ListeJeux.Recherche(TextBoxRecherche.Text);
         }
 
-        #region "Ajout category"
-
-        private void Ajouter_multi_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.Multi);
-        }
-        private void Ajouter_solo_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.Solo);
-        }       
-
-        private void Ajouter_fun_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.Fun);
-        }
-
-        private void Ajouter_histoire_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.Histoire);
-        }
-
-        private void Ajouter_fps_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.FPS);
-        }
-
-        private void Ajouter_conduite_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.Conduite);
-        }
-
-        private void Ajouter_survival_Click(object sender, RoutedEventArgs e)
-        {
-            List<Jeux> ListeJeux = (App.Current as App).LeManager.ListeJeux.ListeJeux;
-
-            ListeJeux[(App.Current as App).LeManager.IndexJeuxChoisi].AjouterCategory(Category.Survival);
-        }
-# endregion
 
         #region "Filtre"
         private void Filtre_all_Click(object sender, RoutedEventArgs e)
@@ -205,6 +155,11 @@ namespace Launch_game.Windows
             ListeJeuxVue.ItemsSource = (App.Current as App).LeManager.ListeJeux.FiltreCategory(Category.Survival);
         }
 
-        # endregion
+        #endregion
+
+        private void Modifier_Click(object sender, RoutedEventArgs e)
+        {
+            (App.Current as App).LeNavigateur.Etatactuel = Navigator.Etat.MODIFICATIONJEUX;
+        }
     }
 }
